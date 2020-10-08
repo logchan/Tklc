@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>2a4497ac-5141-4736-8039-44dfb5ea495e</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Tklc.CommandLine</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CommandContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CommandHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CommandManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CommandOutput.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ICommandHandler.cs" />
+  </ItemGroup>
+</Project>

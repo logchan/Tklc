@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>2892421a-fc94-404b-9ebf-e3e97253992c</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Tklc.Drawing</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)DrawingHelpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gif\ApplicationExtensionBlock.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gif\CommentExtensionBlock.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gif\GifColorTable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gif\GifDecodingException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gif\GifFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gif\GifFrame.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gif\GifHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gif\GifLzwDecoder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gif\GifVersion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gif\GraphicsControlExtensionBlock.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gif\PlainTextExtensionBlock.cs" />
+  </ItemGroup>
+</Project>

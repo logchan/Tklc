@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="nunit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.15.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\build\Tklc.Cryptography\Tklc.Cryptography.NetCoreApp31\Tklc.Cryptography.NetCoreApp31.csproj" />
+    <ProjectReference Include="..\..\build\Tklc.Framework\Tklc.Framework.NetCoreApp31\Tklc.Framework.NetCoreApp31.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>482a4515-69cb-4312-84b7-0566841272e3</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Tklc.Wpf</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\CommandHelpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\BooleanInversionConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\StringJoinConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\ValueToVisibilityConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Media\GifDecoder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Media\GifImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Media\GifImageFrame.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Media\ImagingHelpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\ImageViewerCanvas.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\ImageZoomMode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\WindowPosition.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RootNamespace>Tklc.Framework</RootNamespace>
+    <AssemblyName>Tklc.Framework.NetCoreApp22</AssemblyName>
+  </PropertyGroup>
+
+  <Import Project="..\..\..\src\Tklc.Framework\Tklc.Framework.projitems" Label="Shared" />
+
+</Project>

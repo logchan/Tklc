@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>Tklc.CommandLine</RootNamespace>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.6.0" />
+    <PackageReference Include="System.Management.Automation" Version="6.2.3" />
+  </ItemGroup>
+
+  <Import Project="..\..\..\src\Tklc.CommandLine\Tklc.CommandLine.projitems" Label="Shared" />
+
+</Project>

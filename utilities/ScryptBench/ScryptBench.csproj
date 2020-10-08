@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\build\Tklc.Cryptography\Tklc.Cryptography.NetCoreApp31\Tklc.Cryptography.NetCoreApp31.csproj" />
+    <ProjectReference Include="..\..\build\Tklc.Framework\Tklc.Framework.NetCoreApp31\Tklc.Framework.NetCoreApp31.csproj" />
+  </ItemGroup>
+
+</Project>
