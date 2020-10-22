@@ -16,6 +16,7 @@ namespace Tklc.Wpf.UI {
     /// A canvas for displaying images in WPF applications.
     /// </summary>
     public class ImageViewerCanvas : Canvas {
+        private const int FrameThickness = 2;
         private const int SelectionThickness = 3;
         private const int MinimumDuration = 10;
         private const int ChessboardWidth = 24;
@@ -101,13 +102,23 @@ namespace Tklc.Wpf.UI {
         }
 
         public static readonly DependencyProperty ChessboardProperty =
-            DependencyProperty.Register("Chessboard", typeof(bool), typeof(ImageViewerCanvas), new PropertyMetadata(false, (obj, args) => {
-                if (!(obj is ImageViewerCanvas canvas)) {
-                    return;
-                }
+            DependencyProperty.Register("Chessboard", typeof(bool), typeof(ImageViewerCanvas), new PropertyMetadata(false, InvalidateAfterPropertyChange));
 
-                canvas.InvalidateVisual();
-            }));
+        public bool DrawFrame {
+            get => (bool)GetValue(DrawFrameProperty);
+            set => SetValue(DrawFrameProperty, value);
+        }
+
+        public static readonly DependencyProperty DrawFrameProperty =
+            DependencyProperty.Register("DrawFrame", typeof(bool), typeof(ImageViewerCanvas), new PropertyMetadata(false, InvalidateAfterPropertyChange));
+
+        private static void InvalidateAfterPropertyChange(DependencyObject obj, DependencyPropertyChangedEventArgs args) {
+            if (!(obj is ImageViewerCanvas canvas)) {
+                return;
+            }
+
+            canvas.InvalidateVisual();
+        }
 
         public ImageViewerCanvas() {
             var cb = GenerateChessboard();
@@ -201,6 +212,10 @@ namespace Tklc.Wpf.UI {
             dc.PushTransform(new TranslateTransform(_scroll.X, _scroll.Y));
             dc.PushTransform(new ScaleTransform(Zoom, Zoom));
             dc.PushTransform(new RotateTransform(Rotation, _image.Width / 2.0, _image.Height / 2.0));
+            if (DrawFrame) {
+                const double offset = FrameThickness / 2.0;
+                dc.DrawRectangle(null, new Pen(Brushes.Black, FrameThickness), new Rect(-offset, -offset, FrameThickness + _image.Width, FrameThickness + _image.Height));
+            }
             dc.DrawImage(_image, new Rect(0, 0, _image.Width, _image.Height));
             dc.Pop();
             dc.Pop();
